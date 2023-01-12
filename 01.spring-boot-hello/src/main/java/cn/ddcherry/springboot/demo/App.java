@@ -8,7 +8,6 @@ import java.util.Arrays;
 
 @SpringBootApplication
 public class App {
-
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(App.class);
         System.out.println("Beans: " + context.getBeanDefinitionCount());
