@@ -11,6 +11,7 @@
 
     <modules>
         <module>01.spring-boot-hello</module>
+        <module>02.spring-boot-thymeleaf</module>
     </modules>
 
     <properties>
