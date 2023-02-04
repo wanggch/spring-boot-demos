@@ -3,9 +3,10 @@ Spring Boot版本：`2.7.7`
 
 
 
-- [ ] 创建多模块项目
-- [ ] 创建第一个Spring Boot项目
-- [ ] 使用Thymeleaf模板引擎
+- [x] 00.创建多模块项目
+- [x] 01.创建第一个Spring Boot项目
+- [ ] 02.使用Thymeleaf模板引擎
+- [ ] 03.使用Freemarker模板引擎
 
 ## 使用Thymeleaf模板引擎
 
