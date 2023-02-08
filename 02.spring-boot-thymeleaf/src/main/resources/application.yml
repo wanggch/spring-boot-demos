@@ -1,0 +1,15 @@
+
+server:
+  port: 8002
+spring:
+  thymeleaf:
+    # 开发时配置成false，避免修改模板还要重启服务
+    cache: false
+    # 模板模式，支持HTML、XML、TEXT、JAVASCRIPT、CSS、RAW 6种
+    mode: HTML
+    # 编码，可以不用配置，默认值为UTF-8
+    encoding: UTF-8
+    # 模板路径，默认是templates
+    prefix: classpath:/templates/
+    # 模板后缀，默认是.html
+    suffix: .html
