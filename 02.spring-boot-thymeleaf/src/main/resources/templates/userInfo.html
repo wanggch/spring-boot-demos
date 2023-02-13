@@ -7,17 +7,19 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <label>用户ID：</label>
-            <span th:text="${user.id}"></span>
-        </div>
-        <div class="row">
-            <label>用户编码：</label>
-            <span th:text="${user.usercode}"></span>
-        </div>
-        <div class="row">
-            <label>用户名称：</label>
-            <span th:text="${user.name}"></span>
+        <div th:id="${'user_' + user.id}">
+            <div class="row">
+                <label>用户ID：</label>
+                <span th:text="${user.id}"></span>
+            </div>
+            <div class="row">
+                <label>用户编码：</label>
+                <span th:text="${user.usercode}"></span>
+            </div>
+            <div class="row">
+                <label>用户名称：</label>
+                <span th:text="${user.name}"></span>
+            </div>
         </div>
     </div>
 </body>

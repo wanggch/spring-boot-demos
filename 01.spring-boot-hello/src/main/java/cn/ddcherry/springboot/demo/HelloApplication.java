@@ -10,13 +10,13 @@ import java.util.Arrays;
 
 @Slf4j
 @SpringBootApplication
-public class App {
+public class HelloApplication {
 	public static void main(String[] args) throws Exception {
 		// 获取本机IP地址
 		String ip = InetAddress.getLocalHost().getHostAddress();
 		log.info("本机ip: {}", ip);
 
-		ApplicationContext context = SpringApplication.run(App.class);
+		ApplicationContext context = SpringApplication.run(HelloApplication.class);
 		System.out.println("Bean个数: " + context.getBeanDefinitionCount());
 		String[] beanNames = context.getBeanDefinitionNames();
 		Arrays.sort(beanNames);
