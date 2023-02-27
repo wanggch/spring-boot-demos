@@ -1,0 +1,12 @@
+#swagger公共信息
+swagger:
+  title: DDCherry接口文档系统
+  description: DDCherry接口文档系统
+  license: Powered By ddcherry
+  license-url: http://www.bigcherry.vip/
+  terms-of-service-url: http://www.bigcherry.vip/
+  version: 1.0.0
+  contact:
+    name: 嗨皮汪小成
+    email: wgc1220@gmail.com
+    url: https://juejin.cn/user/3614849960783160
