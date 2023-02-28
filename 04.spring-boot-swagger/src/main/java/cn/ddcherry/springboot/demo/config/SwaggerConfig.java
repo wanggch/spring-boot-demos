@@ -25,7 +25,7 @@ public class SwaggerConfig {
 		return new Docket(DocumentationType.SWAGGER_2)
 			.apiInfo(apiInfo())
 			// 分组名称
-			.groupName("1.0.0")
+			.groupName(swaggerProperties.getVersion())
 			.select()
 			// 这里指定Controller扫描包路径
 			.apis(RequestHandlerSelectors.basePackage("cn.ddcherry.springboot.demo.controller"))
@@ -38,7 +38,9 @@ public class SwaggerConfig {
 			.title(swaggerProperties.getTitle())
 			.description(swaggerProperties.getDescription())
 			.termsOfServiceUrl(swaggerProperties.getTermsOfServiceUrl())
-			.contact(new Contact(swaggerProperties.getContract().getName(), swaggerProperties.getContract().getUrl(), swaggerProperties.getContract().getEmail()))
+			.contact(new Contact(swaggerProperties.getContract().getName(),
+				swaggerProperties.getContract().getUrl(),
+				swaggerProperties.getContract().getEmail()))
 			.version(swaggerProperties.getVersion())
 			.build();
 	}
