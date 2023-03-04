@@ -26,4 +26,5 @@ public class EventController {
 		resultMap.put("message", message);
 		return resultMap;
 	}
+
 }
