@@ -1,0 +1,8 @@
+package cn.ddcherry.springboot.demo;
+
+rule "rule_helloworld"
+    when
+        eval(true)
+    then
+        System.out.println("##### Drools规则引擎：Hello World #####");
+end
