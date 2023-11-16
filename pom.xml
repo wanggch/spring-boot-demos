@@ -17,6 +17,9 @@
         <module>05.spring-boot-event</module>
         <module>06.spring-boot-security</module>
         <module>07.spring-boot-drools</module>
+        <module>08.spring-boot-flow</module>
+        <module>09.spring-boot-elk</module>
+        <module>10.spring-boot-validation</module>
     </modules>
 
     <properties>

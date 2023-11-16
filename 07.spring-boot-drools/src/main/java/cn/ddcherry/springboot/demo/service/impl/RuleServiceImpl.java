@@ -16,12 +16,9 @@ import javax.annotation.Resource;
 @Service
 public class RuleServiceImpl extends ServiceImpl<RuleDao, Rule> implements RuleService {
 
-	@Resource
-	private KieContainer kieContainer;
-
 	@Override
-	public void hello() {
-		Rule rule = getByName("hello");
+	public void fire(String name) {
+		Rule rule = getByName(name);
 
 		KieHelper kieHelper = new KieHelper();
 		kieHelper.addContent(rule.getContent(), ResourceType.DRL);
@@ -33,4 +30,5 @@ public class RuleServiceImpl extends ServiceImpl<RuleDao, Rule> implements RuleS
 	private Rule getByName(String name) {
 		return getOne(Wrappers.<Rule>lambdaQuery().eq(Rule::getName, name));
 	}
+
 }

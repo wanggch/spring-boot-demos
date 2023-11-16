@@ -5,5 +5,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 public interface RuleService extends IService<Rule> {
 
-	void hello();
+	void fire(String name);
 }

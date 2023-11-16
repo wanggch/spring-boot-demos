@@ -1,6 +1,5 @@
 package cn.ddcherry.springboot.demo.security.crypto;
 
-import cn.hutool.core.util.CharsetUtil;
 import cn.hutool.crypto.SmUtil;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -19,6 +18,18 @@ public class Sm4PasswordEncoder implements PasswordEncoder {
 
 	@Override
 	public boolean matches(CharSequence rawPassword, String encodedPassword) {
-		return Objects.equals(rawPassword.toString(), SmUtil.sm4(KEY.getBytes(StandardCharsets.UTF_8)).decryptStr(encodedPassword, CharsetUtil.CHARSET_UTF_8));
+		return Objects.equals(rawPassword.toString(),
+			SmUtil.sm4(KEY.getBytes(StandardCharsets.UTF_8)).decryptStr(encodedPassword, StandardCharsets.UTF_8));
 	}
+
+//	public static void main(String[] args) {
+//		Sm4PasswordEncoder sm4PasswordEncoder = new Sm4PasswordEncoder();
+//
+//		String rawPassword = "abc123";
+//		String encodedPassword = sm4PasswordEncoder.encode(rawPassword);
+//		System.out.println("Encoded Password: " + encodedPassword);
+//
+//		boolean matches = sm4PasswordEncoder.matches(rawPassword, encodedPassword);
+//		System.out.println("Password Matches: " + matches);
+//	}
 }

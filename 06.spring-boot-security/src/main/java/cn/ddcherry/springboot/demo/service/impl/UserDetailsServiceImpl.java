@@ -30,7 +30,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		HttpServletRequest request = WebUtil.getRequest();
+//		HttpServletRequest request = WebUtil.getRequest();
 		// 从request中获取其它必要参数
 		User user = userService.findByUsername(username);
 		if (Objects.isNull(user)) {
@@ -38,6 +38,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		}
 		List<String> roleCodeList = roleService.findRoleCodesByUsername(username);
 		List<GrantedAuthority> authorities = roleCodeList.stream().map(SimpleGrantedAuthority::new).collect(Collectors.toList());
-		return new AuthUser(user.getId(), user.getRealName(), user.getAvatar(), user.getPhone(), user.getUsername(), user.getPassword(), authorities);
+		return new AuthUser(user.getId(), user.getRealName(), user.getAvatar(), user.getPhone(),
+			user.getUsername(), user.getPassword(), authorities);
 	}
 }

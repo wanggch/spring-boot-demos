@@ -17,7 +17,7 @@ public class RuleController {
 
 	@GetMapping("/hello")
 	public Object hello() {
-		ruleService.hello();
+		ruleService.fire("hello");
 		return Dict.create().set("msg", "hello world");
 	}
 
