@@ -18,15 +18,25 @@ public class RuleServiceImpl extends ServiceImpl<RuleDao, Rule> implements RuleS
 
 	@Override
 	public void fire(String name) {
+		// 根据规则名称获取规则实体
 		Rule rule = getByName(name);
-
+		// 初始化KieHelper，用于构建规则
 		KieHelper kieHelper = new KieHelper();
+		// 设置规则内容
 		kieHelper.addContent(rule.getContent(), ResourceType.DRL);
+		// 创建KieSession对象
 		KieSession kieSession = kieHelper.build().newKieSession();
+		// 触发规则
 		kieSession.fireAllRules();
+		// 释放KieSession资源
 		kieSession.dispose();
 	}
 
+	/**
+	 * 根据规则名称获取规则实体
+	 * @param name 规则名称
+	 * @return /
+	 */
 	private Rule getByName(String name) {
 		return getOne(Wrappers.<Rule>lambdaQuery().eq(Rule::getName, name));
 	}
