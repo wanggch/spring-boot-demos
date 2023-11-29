@@ -1,0 +1,35 @@
+package cn.ddcherry.springboot.demo;
+
+dialect "java"
+
+import cn.ddcherry.springboot.demo.fact.ExamData;
+
+rule "bmi_1"
+    no-loop true
+    lock-on-active true
+    salience 1
+    when
+        $item:ExamData(bmi < 18.5);
+    then
+        $item.setConclusion("消瘦");
+end
+
+rule "bmi_2"
+    no-loop true
+    lock-on-active true
+    salience 1
+    when
+        $item:ExamData(bmi >= 18.5 && bmi <= 24);
+    then
+        $item.setConclusion("正常");
+end
+
+rule "bmi_3"
+    no-loop true
+    lock-on-active true
+    salience 1
+    when
+        $item:ExamData(bmi > 24);
+    then
+        $item.setConclusion("超重");
+end
