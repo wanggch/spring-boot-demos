@@ -1,6 +1,6 @@
 
 server:
-  port: 10002
+  port: 9902
 spring:
   thymeleaf:
     # 开发时配置成false，避免修改模板还要重启服务

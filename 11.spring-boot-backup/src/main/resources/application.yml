@@ -1,0 +1,6 @@
+ddcherry:
+  backup:
+    tables:
+      - sys_menu
+      - sys_dict
+      - sys_dict_detail

@@ -20,6 +20,8 @@
         <module>08.spring-boot-flow</module>
         <module>09.spring-boot-elk</module>
         <module>10.spring-boot-validation</module>
+        <module>11.spring-boot-backup</module>
+        <module>12.spring-boot-freemarker</module>
     </modules>
 
     <properties>

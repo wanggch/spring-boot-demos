@@ -1,3 +1,5 @@
+server:
+  port: 9904
 #swagger公共信息
 swagger:
   title: DDCherry接口文档系统

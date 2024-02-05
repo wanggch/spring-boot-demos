@@ -1,4 +1,4 @@
 server:
-  port: 7709
+  port: 9909
 logging:
   config: classpath:log/logback-dev.xml

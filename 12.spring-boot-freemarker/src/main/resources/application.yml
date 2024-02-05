@@ -1,0 +1,16 @@
+server:
+  port: 9912
+spring:
+  application:
+    name: FreemarkerApplication
+  freemarker:
+    # 设置模板后缀名
+    suffix: .ftl
+    # 设置页面编码格式
+    charset: UTF-8
+    # 设置页面缓存
+    cache: false
+    # 设置ftl文件路径
+    template-loader-path:
+      - classpath:/templates
+    content-type: text/plain
