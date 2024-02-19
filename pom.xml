@@ -22,6 +22,7 @@
         <module>10.spring-boot-validation</module>
         <module>11.spring-boot-backup</module>
         <module>12.spring-boot-freemarker</module>
+        <module>13.spring-boot-face</module>
     </modules>
 
     <properties>
@@ -29,6 +30,9 @@
         <lombok.version>1.18.24</lombok.version>
         <spring-boot.version>2.7.7</spring-boot.version>
         <mapstruct.version>1.5.3.Final</mapstruct.version>
+        <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
+        <hutool.version>5.7.22</hutool.version>
+        <druid.version>1.2.16</druid.version>
     </properties>
 
     <dependencies>
