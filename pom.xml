@@ -23,6 +23,7 @@
         <module>11.spring-boot-backup</module>
         <module>12.spring-boot-freemarker</module>
         <module>13.spring-boot-face</module>
+        <module>14.spring-boot-desensitize</module>
     </modules>
 
     <properties>
@@ -57,7 +58,7 @@
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-            <version>5.7.22</version>
+            <version>${hutool.version}</version>
         </dependency>
         <dependency>
             <groupId>org.mapstruct</groupId>
